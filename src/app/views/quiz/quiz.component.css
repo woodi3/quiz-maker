@@ -1,0 +1,14 @@
+.quiz {
+    position: relative;
+}
+.quiz-back-btn {
+    margin: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.back-btn-text {
+    font-size: 1.15rem;
+    margin-right: .5rem;
+    margin-left: .5rem;
+}

@@ -1,0 +1,18 @@
+<div *ngIf="question" class="question-container">
+    <h1 class="question-text">
+        <fa-icon *ngIf="question.isAnswered" [icon]="question.isCorrect ? ['fas', 'check'] : ['fas', 'times']"
+            [ngStyle]="{'color': question.isCorrect ? theme.success : theme.danger}"></fa-icon>
+        {{num}}. {{question.text}}
+    </h1>
+    <div class="choice-container">
+        <div class="choice" [ngClass]="{'disabled': question.isAnswered && !choice.hasAnswer}" 
+        *ngFor="let choice of question.choices"
+        [ngStyle]="{'background-color': theme.darkBlueLight}"
+        (click)="answer(choice)">
+            <fa-icon [icon]="choice.hasAnswer ? ['fas', 'circle'] : ['far', 'circle']" 
+            size="lg"
+            [ngStyle]="{'color': theme.darkBlue}"></fa-icon>
+            <p class="choice-text">{{choice.text}}</p>
+        </div>
+    </div>
+</div>

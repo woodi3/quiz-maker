@@ -1,0 +1,15 @@
+<div class="quiz">
+    <div class="quiz-back-btn" 
+    [ngStyle]="{'color': theme.darkBlue}"
+    (click)="goBack()">
+        <fa-icon [icon]="['fas', 'arrow-left']" size="3x"></fa-icon>
+        <span class="back-btn-text">Back</span>
+    </div>
+    <div class="quiz-container">
+        <question *ngIf="quiz.questions" 
+        [question]="quiz.questions[currNum-1]" 
+        [num]="currNum"
+        (onAnswer)="goNextQuestion()"></question>
+    </div>
+    <quiz-footer [completion]="quiz.completion"></quiz-footer>
+</div>

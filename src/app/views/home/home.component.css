@@ -1,0 +1,63 @@
+.menu-container {
+    margin-top: 10%;
+    position: relative;
+    width: 100%;
+}
+.wavy-bg {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.welcome-text {
+    text-align: center;
+    width: 100%;
+}
+.menu {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.nav-row {
+    display: flex;
+    flex: 1;
+    margin: .5rem;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: center;
+}
+.nav-row > .menu-item {
+    padding: 1.5rem;
+    margin: .5rem .75rem;
+    border-radius: .5rem;
+    width: 24%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+    transition: transform .25s ease-in-out .25s;
+}
+.menu-item:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.menu-item > .menu-header, .menu-subheader {
+    text-align: left;
+}
+.menu-item > .menu-header {
+    margin: 0;
+}
+.menu-item > .menu-subheader {
+    margin: .5rem 0 0 0;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.menu-item > .menu-icon {
+    padding: 1rem;
+    text-align: right;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 601px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .nav-row > .menu-item {
+        width: 100%;
+    }
+}

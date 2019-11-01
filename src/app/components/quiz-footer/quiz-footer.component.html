@@ -1,0 +1,19 @@
+<div class="quiz-footer">
+    <div class="progress-bar-container">
+        <div class="progress-bar" [ngStyle]="{'background-color': theme.light}"></div>
+        <div class="progress-bar-overlay" [ngStyle]="{'width': completion+'%'}">
+            <div class="progress-indicator" [ngStyle]="{'background-color': theme.darkBlue}"></div>
+            <div *ngIf="completion > 0" class="progress-circle" [ngStyle]="{'background-color': theme.darkBlue}"></div>
+        </div>
+    </div>
+    <div class="progress-percentage" #percentage>
+        <h1>{{completion}} %</h1>
+    </div>
+    <!-- <button class="next-btn" 
+    [disabled]="disableNext"
+    [ngStyle]="{'background-color': theme.darkBlue}"
+    (click)="onNextClick()">
+        Next Question
+        <fa-icon style="margin-left: 1rem;" [icon]="['fas', 'arrow-right']" size="lg"></fa-icon>
+    </button> -->
+</div>
